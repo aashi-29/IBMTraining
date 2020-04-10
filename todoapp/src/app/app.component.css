@@ -1,0 +1,30 @@
+/* .container{
+    width: 250px;
+    background-color: #bbb;
+    border: 1px saddlebrown;
+    border-radius: 20;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    margin-top: 100px;
+    } */
+    /* .header input{
+        padding:10px;
+        margin:10px;
+        width:80%;
+        border: 1px solid #333;
+        border-radius:5px;
+    } */
+
+    .todo{
+        width: 250px;
+        background-color: #bbb;
+        border: 1px saddlebrown;
+        border-radius: 20;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+        margin-top: 100px;
+        }
