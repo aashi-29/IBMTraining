@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Calc</title>
+</head>
+<body>
+   <input id="op1" type="number"/>
+   <input id="op2" type="number"/>
+   <div id="result"></div>
+    <button onclick="add()"> + </button>
+    <button onclick="minus()"> - </button>
+    <button onclick="multiply()"> * </button>
+    <button onclick="divide()"> / </button>
+
+    <script>
+
+        function add(){
+            console.log('Add function called')
+            var op1 = document.getElementById('op1').value
+            var op2 = document.getElementById('op2').value
+            var result = parseInt(op1) + parseInt(op2)
+            document.getElementById('result').innerText = result
+        }
+
+        function minus(){
+            console.log('minus function called')
+            var op1 = document.getElementById('op1').value
+            var op2 = document.getElementById('op2').value
+            var result = parseInt(op1) - parseInt(op2)
+            document.getElementById('result').innerText = result
+        }
+
+        function multiply(){
+            console.log('multiply function called')
+            var op1 = document.getElementById('op1').value
+            var op2 = document.getElementById('op2').value
+            var result = parseInt(op1) * parseInt(op2)
+            document.getElementById('result').innerText = result
+        }
+
+        function divide(){
+            console.log('divide function called')
+            var op1 = document.getElementById('op1').value
+            var op2 = document.getElementById('op2').value
+            var result = parseInt(op1) / parseInt(op2)
+            document.getElementById('result').innerText = result
+        }
+
+
+    </script>
+</body>
+</html>
