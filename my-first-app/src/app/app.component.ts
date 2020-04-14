@@ -18,18 +18,31 @@ export class AppComponent implements OnInit{
 
   ngOnInit(){
     console.log('Initialization code will be...')
+    // this.http.get('http://localhost:8000/api/employee').toPromise()
+    this.courseService.fetchAllCourses()
+    .subscribe((res: any) => {
+      console.log(res);
+      this.courses = res;
+      
+    })
+  }
+
+
+
+
+
     // // this.http.get('http://localhost:8000/api/employee').toPromise()
     // this.courseService.fetchAllCourses()
     // .then((res: any) => {
     //   console.log(res);
     //   this.courses = res;
     // })
-  }
 
-  handleLoadedEvent(data: Array<string>){
-    console.log('In parent app component...', data)
-    this.alphabets = data
-  }
+
+  // handleLoadedEvent(data: Array<string>){
+  //   console.log('In parent app component...', data)
+  //   this.alphabets = data
+  // }
 
   title :string = 'Welcome to Angular App';
   courses: Array<any> = []

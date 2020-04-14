@@ -11,10 +11,12 @@ import { TableComponent } from './components/table/table.component';
 import { SearchPipe } from './pipes/search.pipe';
 import { FirstComponent } from './components/first/first.component';
 import { SecondComponent } from './components/second/second.component';
+import { CityComponent } from './components/city/city.component';
+import { CountryComponent } from './components/country/country.component';
 
 @NgModule({
   declarations: [
-    AppComponent, DateComponent, BadgeComponent, CardComponent, JumbotronComponent, TableComponent, SearchPipe, FirstComponent, SecondComponent
+    AppComponent, DateComponent, BadgeComponent, CardComponent, JumbotronComponent, TableComponent, SearchPipe, CityComponent, CountryComponent, FirstComponent, SecondComponent 
   ],
   imports: [
     BrowserModule, HttpClientModule
