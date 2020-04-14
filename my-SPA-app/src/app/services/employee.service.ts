@@ -13,13 +13,23 @@ export class EmployeeService {
     return this.http.get(baseUrl);
   }
 
-  addEmployee()
-  { return this.http.post(baseUrl, 
-    {
-     "name": "Aashi",
-     "salary": 9123100.00
-     } 
-  );
+  addEmployee(name: string, salary: number){
+    return this.http.post(baseUrl, 
+      {name: name, salary: salary},{observe : 'response'})
+
   }
+
+  deleteEmployee(id: number){
+    return this.http.delete(baseUrl + id, {observe : 'response'})
+
+  }
+  // addEmployee()
+  // { return this.http.post(baseUrl, 
+  //   {
+  //    "name": "Aashi",
+  //    "salary": 9123100.00
+  //    } 
+  // );
+  // }
 
 }

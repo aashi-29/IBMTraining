@@ -7,20 +7,23 @@ import { EmployeeService } from 'src/app/services/employee.service';
   styleUrls: ['./add-employee.component.css']
 })
 export class AddEmployeeComponent implements OnInit {
-  
-  Employees: Array<any> = []
 
-  constructor(private employeeservice: EmployeeService) { }
+
+  showMessage : boolean = false;
+  constructor(private employeeService : EmployeeService) { }
 
   ngOnInit(): void {
-    this.employeeservice.addEmployee()
-    .subscribe((res:any)=> {
-      console.log(res);
-      this.Employees = res;
-    })
   }
-  
 
- 
+  addEmployee(name: string, salary: number){
+    console.log(name, salary);
+    this.employeeService.addEmployee(name, salary)
+    .subscribe(res=>{
+      console.log(res)
+      if(res.status == 201){
+        this.showMessage = true;
+      }
+    });
+  }
 
 }
