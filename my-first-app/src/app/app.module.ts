@@ -9,10 +9,12 @@ import { CardComponent } from './components/card/card.component';
 import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 import { TableComponent } from './components/table/table.component';
 import { SearchPipe } from './pipes/search.pipe';
+import { FirstComponent } from './components/first/first.component';
+import { SecondComponent } from './components/second/second.component';
 
 @NgModule({
   declarations: [
-    AppComponent, DateComponent, BadgeComponent, CardComponent, JumbotronComponent, TableComponent, SearchPipe
+    AppComponent, DateComponent, BadgeComponent, CardComponent, JumbotronComponent, TableComponent, SearchPipe, FirstComponent, SecondComponent
   ],
   imports: [
     BrowserModule, HttpClientModule

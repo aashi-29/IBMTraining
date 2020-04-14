@@ -6,9 +6,16 @@
 <app-badge caption="Sent" count="33"></app-badge>
 <app-badge caption="Spam" count="3443"></app-badge> -->
 
+<p>App component</p>
+
+<hr/>
+<app-first data="{{alphabets}}" (loaded)="handleLoadedEvent($event)"></app-first>
+<hr/>
+<app-second data="{{alphabets | slice:0:3}}"></app-second>
 
 
-<div class="container">
+
+<!-- <div class="container">
   <div class="row ">
      
     <div class="input-group mb-3">
@@ -18,11 +25,11 @@
       <input type="text" #name (keyup)="0" class="form-control" placeholder="Enter a name here" aria-label="Username" aria-describedby="basic-addon1">
 
 
-    </div> 
+    </div>  -->
    
       <!-- <app-card *ngFor="let course of courses" caption="{{course.title}}" summary="{{course.summary}}"></app-card> -->
      <!-- <app-jumbotron *ngFor="let course of courses" caption="{{course.title}}" summary="{{course.summary}}"></app-jumbotron>  -->
-      <app-card *ngFor="let course of courses | search:name.value" caption="{{course.name}}" summary="{{course.salary}}" id="{{course.id}}"></app-card>
+      <!-- <app-card *ngFor="let course of courses | search:name.value" caption="{{course.name}}" summary="{{course.salary}}" id="{{course.id}}"></app-card> -->
       <!-- <table class="table table-dark">
         <thead>
           <tr>
@@ -34,5 +41,5 @@
         <app-table *ngFor="let course of courses" caption="{{course.name}}" summary="{{course.salary}}" id="{{course.id}}"></app-table>
         </table>   -->
     
-  </div>
- </div>
+  <!-- </div>
+ </div> -->
