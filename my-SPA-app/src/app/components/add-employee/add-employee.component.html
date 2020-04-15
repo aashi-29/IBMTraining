@@ -10,7 +10,7 @@
       <span class="input-group-text" id="addon-wrapping">Employee Name</span>
     </div>
     <input type="text" #name class="form-control" placeholder="Enter name" aria-label="name" aria-describedby="addon-wrapping">
-   
+    <span *ngIf="myForm.controls['name'].invalid && (myForm.controls['name'].dirty || myForm.controls['name'].touched)" class="alert alert-danger">Name is missing</span>
 </div>
 
 <div class="input-group flex-nowrap">
@@ -19,4 +19,5 @@
   </div>
   <input type="number" #salary class="form-control" placeholder="Enter salary" aria-label="name" aria-describedby="addon-wrapping">
 </div>
-<button type="button" class="btn btn-primary" (click)="addEmployee(name.value, salary.value)">Add Employee</button>
+<!-- <button type="button" class="btn btn-primary" (click)="addEmployee(name.value, salary.value)">Add Employee</button> -->
+<button type="button" class="btn btn-primary" (click)="addEmployee()">Add Employee</button>
