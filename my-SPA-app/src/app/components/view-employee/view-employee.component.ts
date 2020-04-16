@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from 'src/app/services/employee.service';
 import { Employee } from 'src/app/models/employee';
 import { Router } from '@angular/router';
+import { LogService } from 'src/app/services/log.service';
 
 @Component({
   selector: 'app-view-employee',
@@ -13,7 +14,7 @@ export class ViewEmployeeComponent implements OnInit {
   showMessage : boolean = false;
   employees: Array<Employee> = []
 
-  constructor(private employeeService : EmployeeService, private router: Router) { }
+  constructor(private employeeService : EmployeeService, private router: Router, public logService: LogService) { }
 
   ngOnInit(): void {
     this.employeeService.fetchAllEmployees()
@@ -39,4 +40,7 @@ export class ViewEmployeeComponent implements OnInit {
     this.router.navigate(['add', employee])
   }
 
+  log(message: string){
+    this.logService.add(message)
+  }
 }
