@@ -1,0 +1,23 @@
+<p>take-quiz works!</p>
+<div class="container">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="column">
+                <h1 class="display-4">{{currentQuestionName}}</h1>
+                <div *ngFor="let c of choices" class="lead">
+                    <label><input type="radio" (click)="calculate(c.isAnswer)">{{c.text}}</label>
+                </div>
+                <span class="lead" *ngIf="! isLastQuestion">
+                    <a class="btn btn-secondary btn-lg"  (click)="nextQuestion()">Next Question</a>
+                </span>
+                <span class="lead" *ngIf="! isFirstQuestion" style="margin-left: auto">
+                    <a class="btn btn-secondary btn-lg" (click)="previousQuestion()">Previous Question</a>
+                </span>
+                <span class="lead" style="margin-left: auto">
+                    <a class="btn btn-secondary btn-lg" (click)="viewResult()">Submit</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+

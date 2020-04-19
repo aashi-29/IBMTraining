@@ -1,0 +1,6 @@
+<p>view-quiz works!</p>
+<div class="jumbotron">
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let q of quiz"> <p>{{q.name}}  <button class="btn btn-primary" (click)="takeQuiz(q)"> takeQuiz </button></p></li>
+</ul>
+</div>
