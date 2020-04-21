@@ -2,8 +2,20 @@
     color: #0c0606;
     padding: 30px;
     margin-bottom: 30px;
+    margin-right: 30px;
     font-size: 21px;
     font-weight: 100;
+    font-style: oblique;
     line-height: 2.1428571435;
-    background-color: #b95353;
+    background-image: url('C:/Users/dell/Desktop/ibm/b.jpg');
+ }
+
+ .mat-spinner {
+    position: right;
+    size: 20px;
+    
+}
+
+ button{
+    margin-right: 3rem;
  }

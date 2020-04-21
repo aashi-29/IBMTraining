@@ -8,12 +8,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ResultComponent implements OnInit {
 
+  showMessage : boolean = false;
   count:string;
   constructor(private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params =>{
       this.count=params.get("count");
+      this.showMessage= true;
       console.log(this.count);
     })
   }

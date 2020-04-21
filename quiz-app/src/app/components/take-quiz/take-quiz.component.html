@@ -8,14 +8,15 @@
                     <label><input type="radio" (click)="calculate(c.isAnswer)">{{c.text}}</label>
                 </div>
                 <span class="lead" *ngIf="! isLastQuestion">
-                    <a class="btn btn-secondary btn-lg"  (click)="nextQuestion()">Next Question</a>
+                    <a button mat-raised-button  (click)="nextQuestion()">Next Question</a>
                 </span>
                 <span class="lead" *ngIf="! isFirstQuestion" style="margin-left: auto">
-                    <a class="btn btn-secondary btn-lg" (click)="previousQuestion()">Previous Question</a>
+                    <a button mat-raised-button (click)="previousQuestion()">Previous Question</a>
                 </span>
                 <span class="lead" style="margin-left: auto">
-                    <a class="btn btn-secondary btn-lg" (click)="viewResult()">Submit</a>
+                    <a button mat-raised-button (click)="viewResult()">Submit</a>
                 </span>
+                <mat-spinner mode="indeterminate"></mat-spinner>
             </div>
         </div>
     </div>

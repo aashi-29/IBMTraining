@@ -8,6 +8,8 @@ import { CommonService } from 'src/app/services/common.service';
   styleUrls: ['./take-quiz.component.css']
 })
 export class TakeQuizComponent implements OnInit {
+
+  showMessage : boolean = false;
   currentQuestion: any;
   currentQuestionName: any;
   choices: Array<any> = [];
@@ -98,6 +100,7 @@ export class TakeQuizComponent implements OnInit {
     this.answer.forEach(i => {
       if (i == true) {
         this.count++;
+        this.showMessage= true;
       }
     });
     console.log("result", this.count);

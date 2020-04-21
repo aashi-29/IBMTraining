@@ -1,9 +1,24 @@
-.jumbotron{
-    color: #0c0606;
-    padding: 30px;
-    margin-bottom: 30px;
-    font-size: 21px;
-    font-weight: 100;
-    line-height: 2.1428571435;
-    background-color: #b30000;
- }
+.card{
+  position: relative;
+  font-style: normal ;
+
+}
+
+
+.jumbotron {
+    position: relative;
+    overflow: hidden;
+    background-image: url('C:/Users/dell/Desktop/ibm/design-definition.jpeg');
+
+
+    /* position: absolute; */
+    z-index: 1;
+    top: 0;
+    width:70%;
+    height:50%;
+    /*  object-fit is not supported on IE  */
+    object-fit: cover;
+    
+  }
+  
+  
