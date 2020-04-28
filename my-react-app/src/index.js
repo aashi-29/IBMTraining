@@ -5,8 +5,9 @@ import './index.css';
 // import Badge from './Badge'
 // import Clock from './Clock'
 // import Card from './card'
-import Dropdown from './Dropdown'
+// import Dropdown from './Dropdown'
 import * as serviceWorker from './serviceWorker';
+import Employee from './Employee';
 
 // setInterval(()=>{
 //   var today = new Date();
@@ -27,7 +28,8 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
   <React.StrictMode>
     {/* <Badge></Badge> */}
-    <Dropdown caption="Select Courses"/>
+    {/* <Dropdown caption="Select Courses"/> */}
+    <Employee />
   </React.StrictMode>,
   document.getElementById('root')
 );

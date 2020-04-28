@@ -28,13 +28,13 @@ class Employee extends Component {
     }
 
     handleSubmit(event) {
-        console.log('A name was submitted: ' + this.state.name , this.state.salary);
+        console.log('A name was submitted: ' + this.state.id, this.state.name , this.state.salary);
         fetch('http://localhost:8000/api/employee', {
             method: 'POST', // *GET, POST, PUT, DELETE, etc. 
             headers: {
               'Content-Type': 'application/json'
             },
-            body: JSON.stringify({name:this.state.name, salary: this.state.salary }) // body data type must match "Content-Type" header
+            body: JSON.stringify({id:this.state.id, name:this.state.name, salary: this.state.salary }) // body data type must match "Content-Type" header
           })
           .then(res=>{
               console.log(res);
@@ -44,13 +44,30 @@ class Employee extends Component {
         event.preventDefault();
       }
 
+      handleDelete(event) {
+        // console.log('A name was submitted: ' + this.state.name , this.state.salary);
+        fetch('http://localhost:8000/api/employee/' + event.id , {
+            method: 'DELETE', // *GET, POST, PUT, DELETE, etc. 
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            // body: JSON.stringify({name:this.state.name, salary: this.state.salary }) // body data type must match "Content-Type" header
+          })
+          .then(res=>{
+              console.log(res);
+              this.setState({message: 'Employee deleted successfully!!'})
+          })
+
+        // event.preventDefault();
+      }
+
     render() {
         if(!this.state.employees)
             return null;
 
         var employeeList = this.state.employees.map((employee, i)=> {
             return (
-               <li>{employee.name} - {employee.salary}</li>
+            <li>{employee.id} - {employee.name} - {employee.salary} <input type="button" onClick={this.handleDelete.bind(this, employee)} value="Delete Employee" /></li>
             )
         })    
         return (
@@ -67,6 +84,8 @@ class Employee extends Component {
                     <input type="number" onChange={this.handleSalaryChange.bind(this)} value={this.state.salary} />
                     </label>
                     <input type="button" onClick={this.handleSubmit.bind(this)} value="Add Employee" />
+
+
                 </form>
 
                 <ul>
