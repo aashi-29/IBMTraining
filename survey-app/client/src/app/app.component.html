@@ -1,0 +1,40 @@
+<div class= Jumbotron>
+<nav class="navigationWrapper">
+  <div class="logoWrapper">
+    <span class="stylish">SURVEY</span>
+    <span class="logo">PORTAL</span>
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <ul class="navigation">
+    <li class="parent"><a class="link" href="/localhost:4200">Home</a></li>
+    <li class="parent"><a class="link" href="#">About</a></li>
+    <li class="parent" id="clients">
+      <a class="link" href="#"><i class="fas fa-minus"></i> Contact <i class="fas fa-plus"></i></a>
+      <ul class="subnavigation">
+        <li><a class="link" href="#">Contact administration</a></li>
+        <li><a class="link" href="#">Contact management</a></li>
+        <li><a class="link" href="#">Contact developer</a></li>
+      </ul>
+    </li>
+    <li class="parent"><a class="link" href="#">Mail</a></li>
+  </ul>
+</nav>
+
+
+
+
+<br>
+<div id="btns">
+
+
+<button class="btn btn-dark" routerLink="/view">View Surveys <i class="fa fa-search" aria-hidden="true"></i></button> | 
+<button class="btn btn-dark" routerLink="/add">Add Survey <i class="fa fa-plus-circle" aria-hidden="true"></i></button> | 
+<button class="btn btn-dark"><i class="fa fa-gear fa-spin"></i> Insights <i class="fa fa-line-chart" aria-hidden="true"></i></button>
+</div>
+
+<router-outlet></router-outlet>
+
+</div>
